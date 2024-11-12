@@ -2,7 +2,7 @@
 
 This repository contains information on the common (and cheap) ELK-BLEDOM Bluetooth Low Energy RGB LED controller, as well as a Go package for interacting with it.
 
-Bluetooth interactions have been reverse engineered from the Android app. See [`PROTOCOL.md`](PROTCOL.md) for more information on both the hardware and how it can be controlled.
+Bluetooth interactions have been reverse engineered from the Android app. See [`PROTOCOL.md`](PROTOCOL) for more information on both the hardware and how it can be controlled.
 
 ## Example
 

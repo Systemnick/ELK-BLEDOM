@@ -82,11 +82,12 @@ func main() {
 	var device *bluetooth.Device
 	select {
 	case result := <-deviceCh:
-		device, err = adapter.Connect(result.Address, bluetooth.ConnectionParams{})
+		d, err := adapter.Connect(result.Address, bluetooth.ConnectionParams{})
 		if err != nil {
 			panic(err)
 		}
 
+		device = &d
 		fmt.Println("connected to ", result.Address.String())
 	case <-time.After(time.Duration(60) * time.Second):
 		if device == nil {

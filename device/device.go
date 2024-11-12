@@ -94,7 +94,7 @@ func (b *BleDom) Connect(timeout time.Duration) error {
 			return err
 		}
 
-		b.device = device
+		b.device = &device
 	case <-time.After(timeout):
 		if b.device == nil {
 			b.opts.Adapter.StopScan()
